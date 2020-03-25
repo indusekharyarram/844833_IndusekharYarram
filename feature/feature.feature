@@ -3,21 +3,13 @@ Feature: http://examples.codecharge.com/TaskManager/Default.php
 Scenario Outline: Data Driven Login to examples.codecharge.com/TaskManager/Default.php
 Given launch the browser
 When open the application
-When enter username as "<username>" & password "<password>" and click on login
-Then assert true if it is navigating to next page
+Then enter username as "<username>" & password "<password>" and click on login
 Examples:
 	| username | password |
-	| admin | admin | 
+	| admin | admin |
+	| aadmin|  aadmin |
+	| badmin | badmin | 
 
-Scenario Outline: data driven InValid Login to examples.codecharge.com/TaskManager/Default.php
-Given launch the browser1
-When Open the application1
-When Enter username as "<username>" & password "<password>" and click on login
-Then Assert true if it is navigates to next page
-Examples:
-	| username | password |
-	| cognizant | cognizant | 
-	
 Scenario: add Task in examples.codecharge.com/TaskManager/Default.php
 Given open the Application
 When click on Administration2

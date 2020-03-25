@@ -9,7 +9,10 @@ import cucumber.api.junit.Cucumber;
 @CucumberOptions(
 		features = "feature//feature.feature",
 		glue= {"stepDefinitions"},
-		monochrome = true
+		plugin= {"pretty","html:test-output","json:json_output/cucumber.json","junit:junit_xml/cucumber.xml"},
+		monochrome = true,
+		strict=true,
+		dryRun=false
 		)
 public class testRunner {
 	
